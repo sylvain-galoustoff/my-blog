@@ -1,0 +1,101 @@
+@import "reset.css";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --bg: #fff;
+  --bgAlt: #ECECEC;
+  --text: #4E4E4E;
+  --textTitle: #524554;
+  --primary: #9959A6;
+  --blue: #074176;
+  --yellow: #E9A643;
+
+  --dev: 1px solid red;
+
+  --animation-timing: .3s;
+
+  color-scheme: light dark;
+  color: var(--text);
+  background-color: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+#app {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  transition: all var(--animation-timing) ease-in-out;
+}
+
+#app.accueil {
+  background-color: white;
+}
+
+#app.myexpressdriver {
+  background-color: var(--blue);
+}
+
+#app.sylvain-galoustoff {
+  background-color: var(--primary);
+}
+
+#app.smart-home-control {
+  background-color: var(--yellow);
+}
+
+#app.contact {
+  background-color: var(--bg);
+}
+
+#app.a-propos {
+  background-color: var(--bgAlt);
+}
+
+nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.route-animation-wrapper {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
