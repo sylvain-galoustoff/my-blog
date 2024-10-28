@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import WebFont from "webfontloader";
 import "./styles/index.css";
 import App from "./App.tsx";
 import Home from "./routes/home/Home.tsx";
@@ -8,6 +9,12 @@ import Project from "./routes/projects/projects.tsx";
 import Contact from "./routes/contact/Contact.tsx";
 import About from "./routes/about/about.tsx";
 import NotFound from "./routes/notfound/NotFound.tsx";
+
+WebFont.load({
+  google: {
+    families: ["Asap:400,700,900"],
+  },
+});
 
 const router = createBrowserRouter([
   {

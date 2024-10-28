@@ -1,21 +1,10 @@
 @import "reset.css";
+@import "vars.css";
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Asap", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  --bg: #fff;
-  --bgAlt: #ECECEC;
-  --text: #4E4E4E;
-  --textTitle: #524554;
-  --primary: #9959A6;
-  --blue: #074176;
-  --yellow: #E9A643;
-
-  --dev: 1px solid red;
-
-  --animation-timing: .3s;
 
   color-scheme: light dark;
   color: var(--text);
@@ -29,6 +18,11 @@
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
 }
 
 html,
@@ -48,7 +42,7 @@ body,
 }
 
 #app.myexpressdriver {
-  background-color: var(--blue);
+  background-color: rgba(7, 65, 118, 0.6);
 }
 
 #app.sylvain-galoustoff {
@@ -67,28 +61,6 @@ body,
   background-color: var(--bgAlt);
 }
 
-nav {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 100;
-
-  ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 32px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  li {
-    list-style: none;
-  }
-}
-
 .route-animation-wrapper {
   position: fixed;
   height: 100%;
@@ -98,4 +70,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+a.active {
+  background-color: var(--bg);
 }

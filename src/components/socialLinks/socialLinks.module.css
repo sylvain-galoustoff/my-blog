@@ -1,0 +1,33 @@
+#socialLinks {
+  position: absolute;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.socialIcon {
+  width: 32px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 2px solid var(--textTitle);
+  color: var(--textTitle);
+  transition: all var(--animation-timing) ease-in-out;
+}
+
+.socialIcon svg {
+  color: var(--textTitle);
+  transition: all var(--animation-timing) ease-in-out;
+}
+
+.socialIcon:hover {
+  border: 2px solid var(--primary);
+}
+
+.socialIcon:hover svg {
+  color: var(--primary);
+
+}

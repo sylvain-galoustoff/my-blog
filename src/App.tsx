@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation, useNavigate, useOutlet } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Nav from "./components/Nav";
 import pages from "./utils/pages";
+import Topbar from "./components/topbar/Topbar";
 
 const AnimatedOutlet = () => {
   const o = useOutlet();
@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div id="app" className={appClassName}>
-      <Nav />
+      <Topbar />
       <AnimatePresence>
         <motion.div
           key={location.key}

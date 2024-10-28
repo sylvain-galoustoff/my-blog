@@ -1,0 +1,13 @@
+:root {
+  --bg: #fff;
+  --bgAlt: #ECECEC;
+  --text: #4E4E4E;
+  --textTitle: #524554;
+  --primary: #9959A6;
+  --blue: #074176;
+  --yellow: #E9A643;
+
+  --dev: 1px solid red;
+
+  --animation-timing: .3s;
+}

@@ -1,0 +1,17 @@
+#mailAdress {
+  position: absolute;
+  left: 32px;
+  font-weight: 700;
+  color: var(--textTitle);
+}
+
+#copyIcon {
+  position: absolute;
+  top: -4px;
+  right: -20px;
+  cursor: pointer;
+}
+
+#copyIcon:hover {
+  color: var(--primary);
+}

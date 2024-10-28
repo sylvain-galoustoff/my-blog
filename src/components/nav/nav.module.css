@@ -1,0 +1,36 @@
+@import "../../styles/vars.css";
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  padding: 8px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  font-weight: 700;
+  color: var(--textTitle);
+}
+
+#nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav li {
+  list-style: none;
+}
+
+#nav a {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 16px;
+  border-radius: 16px;
+}
