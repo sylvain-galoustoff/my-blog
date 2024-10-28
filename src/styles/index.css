@@ -46,11 +46,11 @@ body,
 }
 
 #app.sylvain-galoustoff {
-  background-color: var(--primary);
+  background-color: rgba(153, 89, 166, .75);
 }
 
 #app.smart-home-control {
-  background-color: var(--yellow);
+  background-color: rgba(233, 166, 67, .95);
 }
 
 #app.contact {
@@ -74,4 +74,5 @@ body,
 
 a.active {
   background-color: var(--bg);
+  color: var(--primary);
 }

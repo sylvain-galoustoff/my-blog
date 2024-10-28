@@ -3,12 +3,11 @@
   left: 32px;
   font-weight: 700;
   color: var(--textTitle);
+  display: flex;
+  gap: 4px;
 }
 
 #copyIcon {
-  position: absolute;
-  top: -4px;
-  right: -20px;
   cursor: pointer;
 }
 
