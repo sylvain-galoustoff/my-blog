@@ -25,6 +25,41 @@ a {
   text-decoration: none;
 }
 
+a.active {
+  background-color: var(--bg);
+  color: var(--primary);
+}
+
+button,
+a.button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-family: "Asap",
+    sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 32px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+button.primary,
+a.button.primary {
+  background-color: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0px 3px var(--text);
+}
+
+span.primary {
+  color: var(--primary);
+}
+
 html,
 body,
 #root,
@@ -72,7 +107,7 @@ body,
   justify-content: center;
 }
 
-a.active {
-  background-color: var(--bg);
-  color: var(--primary);
+.slide {
+  width: 100%;
+  height: 100%;
 }

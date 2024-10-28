@@ -50,7 +50,7 @@ function App() {
   return (
     <div id="app" className={appClassName}>
       <Topbar />
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         <motion.div
           key={location.key}
           initial={{ y: "100%", opacity: 0 }}
