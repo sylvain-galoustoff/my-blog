@@ -32,8 +32,9 @@ a.active {
 
 button,
 a.button {
+  position: relative;
   background-color: transparent;
-  border: 2px solid transparent;
+  border: none;
   border-radius: 8px;
   font-family: "Asap",
     sans-serif;
@@ -43,17 +44,67 @@ a.button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
-  padding: 16px 32px;
+  gap: 8px;
   margin-bottom: 8px;
   cursor: pointer;
+  height: 50px;
+  padding-right: 24px;
+  padding-left: 58px;
 }
 
-button.primary,
-a.button.primary {
-  background-color: var(--primary);
+.button-arrow {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
   color: var(--bg);
-  box-shadow: 0 0px 3px var(--text);
+  background-color: var(--text);
+  transition: all .15s ease-out;
+}
+
+.button-text {
+  position: relative;
+  z-index: 1;
+  transition: all .15s ease-out;
+}
+
+.button-arrow-chevron {
+  font-size: 1.25rem;
+}
+
+.button-arrow-arrow {
+  display: none;
+  font-size: 1.5rem;
+}
+
+button:hover .button-arrow,
+a.button:hover .button-arrow {
+  width: 100%;
+  padding-left: 16px;
+}
+
+button:hover .button-arrow-chevron,
+a.button:hover .button-arrow-chevron {
+  display: none;
+}
+
+button:hover .button-arrow-arrow,
+a.button:hover .button-arrow-arrow {
+  display: block;
+}
+
+button:hover .button-arrow,
+a.button:hover .button-arrow {
+  justify-content: flex-start;
+}
+
+button:hover .button-text,
+a.button:hover .button-text {
+  color: var(--bg);
 }
 
 span.primary {

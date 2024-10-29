@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { variants } from "../../utils/animations";
+import { IoChevronForward, IoArrowForward } from "react-icons/io5";
 
 function HireButton() {
   return (
@@ -13,7 +14,11 @@ function HireButton() {
         transition={{ delay: 0.2, duration: 1, ease: "backInOut" }}
       >
         <Link to="/contact" className="button primary">
-          Embauchez-moi !
+          <span className="button-arrow">
+            <IoChevronForward className="button-arrow-chevron" />
+            <IoArrowForward className="button-arrow-arrow" />
+          </span>
+          <span className="button-text">Embauchez-moi !</span>
         </Link>
       </motion.span>
     </AnimatePresence>
