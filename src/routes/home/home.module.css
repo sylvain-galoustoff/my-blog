@@ -9,6 +9,7 @@
 #top {
   gap: 16px;
   background-color: var(--bgAlt);
+  background-image: url('/src/assets/white_carbon.png');
   height: 60%;
   padding-top: 64px;
   border-bottom-left-radius: 100px;
