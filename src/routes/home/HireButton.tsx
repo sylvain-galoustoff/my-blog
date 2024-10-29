@@ -14,9 +14,9 @@ function HireButton() {
         transition={{ delay: 0.2, duration: 1, ease: "backInOut" }}
       >
         <Link to="/contact" className="button primary">
-          <span className="button-arrow">
-            <IoChevronForward className="button-arrow-chevron" />
-            <IoArrowForward className="button-arrow-arrow" />
+          <span className="button-icon">
+            <IoChevronForward className="button-chevron" />
+            <IoArrowForward className="button-arrow" />
           </span>
           <span className="button-text">Embauchez-moi !</span>
         </Link>

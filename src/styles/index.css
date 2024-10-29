@@ -52,7 +52,7 @@ a.button {
   padding-left: 58px;
 }
 
-.button-arrow {
+.button-icon {
   position: absolute;
   left: 0;
   display: flex;
@@ -72,38 +72,53 @@ a.button {
   transition: all .15s ease-out;
 }
 
-.button-arrow-chevron {
+.button-chevron {
   font-size: 1.25rem;
 }
 
-.button-arrow-arrow {
+.button-arrow {
   display: none;
   font-size: 1.5rem;
 }
 
-button:hover .button-arrow,
-a.button:hover .button-arrow {
+button:hover .button-icon,
+a.button:hover .button-icon {
   width: 100%;
   padding-left: 16px;
 }
 
-button:hover .button-arrow-chevron,
-a.button:hover .button-arrow-chevron {
+button:hover .button-chevron,
+a.button:hover .button-chevron {
   display: none;
-}
-
-button:hover .button-arrow-arrow,
-a.button:hover .button-arrow-arrow {
-  display: block;
 }
 
 button:hover .button-arrow,
 a.button:hover .button-arrow {
+  display: block;
+}
+
+button:hover .button-icon,
+a.button:hover .button-icon {
   justify-content: flex-start;
 }
 
 button:hover .button-text,
 a.button:hover .button-text {
+  color: var(--bg);
+}
+
+button.primary .button-icon,
+a.button.primary .button-icon {
+  background-color: var(--primary);
+}
+
+button.primary .button-text,
+a.button.primary .button-text {
+  color: var(--primary);
+}
+
+button.primary:hover .button-text,
+a.button.primary:hover .button-text {
   color: var(--bg);
 }
 
