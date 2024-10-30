@@ -3,6 +3,7 @@ import { useLocation, useNavigate, useOutlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import pages from "./utils/pages";
 import Topbar from "./components/topbar/Topbar";
+import { usePageContext } from "./context/PageContext";
 
 const AnimatedOutlet = () => {
   const o = useOutlet();
@@ -14,7 +15,7 @@ const AnimatedOutlet = () => {
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
-  const [pageIndex, setPageIndex] = useState(0);
+  const { pageIndex, setPageIndex } = usePageContext();
   const [appClassName, setAppClassName] = useState("accueil");
 
   useEffect(() => {

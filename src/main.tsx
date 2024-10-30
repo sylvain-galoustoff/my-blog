@@ -9,6 +9,7 @@ import Project from "./routes/projects/projects.tsx";
 import Contact from "./routes/contact/Contact.tsx";
 import About from "./routes/about/about.tsx";
 import NotFound from "./routes/notfound/NotFound.tsx";
+import { PageContextProvider } from "./context/PageContext.tsx";
 
 WebFont.load({
   google: {
@@ -44,6 +45,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <PageContextProvider>
+      <RouterProvider router={router} />
+    </PageContextProvider>
   </StrictMode>
 );
