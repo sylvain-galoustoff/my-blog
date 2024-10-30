@@ -8,12 +8,8 @@ function Project() {
 
   useEffect(() => {
     const pathname = location.pathname;
-    console.log(pathname);
-
     if (pathname.includes("projets")) {
       const currentProject = projects.filter((project) => project.pathname === pathname);
-      console.log(currentProject);
-
       if (currentProject) {
         setProject(currentProject[0]);
       }
