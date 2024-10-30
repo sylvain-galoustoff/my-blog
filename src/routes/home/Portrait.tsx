@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./home.module.css";
 import url from "../../assets/avatar-sylvain-galoustoff.png";
-import { variants } from "../../utils/animations";
+import { bounceTransition, linearTransition, variants } from "../../utils/animations";
 
 function Portrait() {
   return (
@@ -12,7 +12,10 @@ function Portrait() {
         initial="initial"
         animate="animate"
         exit="exit"
-        transition={{ delay: 0.1, duration: 1, ease: "backInOut" }}
+        transition={{
+          y: bounceTransition,
+          opacity: linearTransition,
+        }}
       >
         <img src={url} alt="Portrait de Sylvain Galoustoff" />
       </motion.div>

@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./home.module.css";
-import { variants } from "../../utils/animations";
+import { bounceTransition, linearTransition, variants } from "../../utils/animations";
 
 function Title() {
   return (
@@ -11,7 +11,10 @@ function Title() {
         initial="initial"
         animate="animate"
         exit="exit"
-        transition={{ delay: 0.15, duration: 1, ease: "backInOut" }}
+        transition={{
+          y: { ...bounceTransition, delay: 0.1 },
+          opacity: { ...linearTransition, delay: 0.1 },
+        }}
       >
         <span id={style.ui}>UI</span>
         <div id={style.jobs}>
