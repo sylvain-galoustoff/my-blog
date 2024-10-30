@@ -8,7 +8,11 @@ function Nav() {
 
   const HandleNavClick = (pathname: string) => {
     const newIndex = pages.indexOf(pathname);
-    setPageIndex(newIndex);
+    if (newIndex === -1) {
+      setPageIndex(1);
+    } else {
+      setPageIndex(newIndex);
+    }
   };
 
   return (

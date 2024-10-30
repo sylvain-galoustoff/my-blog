@@ -28,6 +28,10 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "projets",
+        element: <Project />,
+      },
+      {
         path: "projets/:slug",
         element: <Project />,
       },
