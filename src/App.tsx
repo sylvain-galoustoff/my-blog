@@ -17,6 +17,7 @@ function App() {
   const navigate = useNavigate();
   const { pageIndex, setPageIndex } = usePageContext();
   const [appClassName, setAppClassName] = useState("accueil");
+  const [scrollDirection, setScrollDirection] = useState("up");
 
   useEffect(() => {
     navigate(pages[pageIndex]);
@@ -25,11 +26,13 @@ function App() {
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (e.deltaY >= 100) {
+        setScrollDirection("down");
         const newpageIndex = pageIndex + 1;
         if (newpageIndex !== pages.length) {
           setPageIndex(newpageIndex);
         }
       } else if (e.deltaY <= 100) {
+        setScrollDirection("up");
         const newPageIndex = pageIndex - 1;
         if (newPageIndex >= 0) {
           setPageIndex(newPageIndex);
@@ -54,10 +57,10 @@ function App() {
       <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={location.key}
-          initial={{ y: "100%", opacity: 0 }}
+          initial={{ y: scrollDirection === "down" ? "100%" : "-100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: "-100%" }}
-          transition={{ duration: 0.3 }}
+          exit={{ y: scrollDirection === "down" ? "-100%" : "100%" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className={`route-animation-wrapper`}
         >
           <AnimatedOutlet />
