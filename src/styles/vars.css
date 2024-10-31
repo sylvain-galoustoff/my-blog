@@ -10,4 +10,8 @@
   --dev: 1px solid red;
 
   --animation-timing: .3s;
+
+  /* font sizes */
+  --regular: 1.5rem;
+  --big: 2.3rem;
 }

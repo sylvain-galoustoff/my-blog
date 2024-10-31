@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { bounceTransition, linearTransition, variants } from "../../utils/animations";
-import { IoChevronForward, IoArrowForward } from "react-icons/io5";
+import ButtonLink from "../../components/buttons/ButtonLink";
 
 function HireButton() {
   return (
@@ -16,13 +15,7 @@ function HireButton() {
           opacity: { ...linearTransition, delay: 0.2 },
         }}
       >
-        <Link to="/contact" className="button primary">
-          <span className="button-icon">
-            <IoChevronForward className="button-chevron" />
-            <IoArrowForward className="button-arrow" />
-          </span>
-          <span className="button-text">Embauchez-moi !</span>
-        </Link>
+        <ButtonLink to="/contact" label="Embauchez-moi !" variant="primary" />
       </motion.span>
     </AnimatePresence>
   );

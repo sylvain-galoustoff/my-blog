@@ -1,10 +1,14 @@
 import { useLocation } from "react-router-dom";
-import { projects } from "./mocks";
+import { projects } from "./mock";
 import { useEffect, useState } from "react";
+import ProjectsCounter from "./ProjectsCounter";
+import ProjectScreenshot from "./ProjectScreenshot";
+import ProjectDescription from "./ProjectDescription";
+import ProjectType from "../../models/Project";
 
 function Project() {
   const location = useLocation();
-  const [project, setProject] = useState(projects[0]);
+  const [project, setProject] = useState<ProjectType>(projects[0]);
 
   useEffect(() => {
     const pathname = location.pathname;
@@ -18,7 +22,19 @@ function Project() {
 
   return (
     <div className="slide" id="project">
-      <h1>{project.name}</h1>
+      <ProjectsCounter
+        projectNumber={projects.indexOf(project) + 1}
+        projectsTotal={projects.length}
+      />
+      <ProjectScreenshot
+        projectName={project.name}
+        filename={project.screenshot}
+        url={project.url}
+      />
+      <ProjectDescription
+        project={project}
+        projectNumber={projects.indexOf(project) + 1}
+      />
     </div>
   );
 }

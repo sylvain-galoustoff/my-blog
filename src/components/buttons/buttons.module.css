@@ -1,0 +1,91 @@
+button,
+a.button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  font-family: "Asap",
+    sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  height: 50px;
+  padding-right: 24px;
+  padding-left: 58px;
+}
+
+.buttonIcon {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  color: var(--bg);
+  background-color: var(--text);
+  transition: all .15s ease-out;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  transition: all .15s ease-out;
+}
+
+.chevron {
+  font-size: 1.25rem;
+}
+
+.arrow {
+  display: none;
+  font-size: 1.5rem;
+}
+
+button:hover .buttonIcon,
+a.button:hover .buttonIcon {
+  width: 100%;
+  padding-left: 16px;
+}
+
+button:hover .chevron,
+a.button:hover .chevron {
+  display: none;
+}
+
+button:hover .arrow,
+a.button:hover .arrow {
+  display: block;
+}
+
+button:hover .buttonIcon,
+a.button:hover .buttonIcon {
+  justify-content: flex-start;
+}
+
+button:hover .text,
+a.button:hover .text {
+  color: var(--bg);
+}
+
+button.primary .buttonIcon,
+a.button.primary .buttonIcon {
+  background-color: var(--primary);
+}
+
+button.primary .text,
+a.button.primary .text {
+  color: var(--primary);
+}
+
+button.primary:hover .text,
+a.button.primary:hover .text {
+  color: var(--bg);
+}

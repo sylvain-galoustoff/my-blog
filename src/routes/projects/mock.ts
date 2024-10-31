@@ -1,8 +1,11 @@
 export const projects = [
   {
+    id: 1,
     name: "myexpressdriver",
     pathname: "/projets/myexpressdriver",
-    roles: ["front-end"],
+    screenshot: "my-expressdriver-homepage.png",
+    url: "https://myexpressdriver.com/",
+    roles: ["Front-end", "Designer"],
     year: "2024",
     context: "alternance",
     description: [
@@ -29,8 +32,10 @@ export const projects = [
     ],
   },
   {
+    id: 2,
     name: "sylvain-galoustoff.dev",
     pathname: "/projets/sylvain-galoustoff",
+    screenshot: "site-sylvain-galoustoff.png",
     roles: ["front-end", "design"],
     year: "2024",
     context: "Personnnal branding",
@@ -46,8 +51,10 @@ export const projects = [
     ],
   },
   {
+    id: 3,
     name: "smart home control",
     pathname: "/projets/smart-home-control",
+    screenshot: "dashboard.jpg",
     roles: ["front-end", "design"],
     year: "2023",
     context: "Démo technique",
