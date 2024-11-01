@@ -30,6 +30,7 @@ function Project() {
         projectName={project.name}
         filename={project.screenshot}
         url={project.url}
+        variant={project.variant}
       />
       <ProjectDescription
         project={project}

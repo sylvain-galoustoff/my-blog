@@ -12,7 +12,7 @@ function ExternalButtonLink({ to, label, variant }: ExternalButtonLinkProps) {
     <a
       href={to}
       className={`${style.button} ${variant && style[variant]}`}
-      about="_blank"
+      target="_blank"
     >
       <span className={style.buttonIcon}>
         <IoChevronForward className={style.chevron} />

@@ -89,3 +89,19 @@ button.primary:hover .text,
 a.button.primary:hover .text {
   color: var(--bg);
 }
+
+button.white .buttonIcon,
+a.button.white .buttonIcon {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+button.white .text,
+a.button.white .text {
+  color: var(--text);
+}
+
+button.white:hover .text,
+a.button.white:hover .text {
+  color: var(--text);
+}

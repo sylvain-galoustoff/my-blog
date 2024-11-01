@@ -55,6 +55,7 @@ export const projects = [
     name: "smart home control",
     pathname: "/projets/smart-home-control",
     screenshot: "dashboard.jpg",
+    url: "https://demo.sylvain-galoustoff.dev/widgets/",
     roles: ["front-end", "design"],
     year: "2023",
     context: "Démo technique",
