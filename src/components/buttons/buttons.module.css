@@ -98,7 +98,7 @@ a.button.white .buttonIcon {
 
 button.white .text,
 a.button.white .text {
-  color: var(--text);
+  color: var(--bg);
 }
 
 button.white:hover .text,

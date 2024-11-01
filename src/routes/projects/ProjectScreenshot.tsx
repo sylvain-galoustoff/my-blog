@@ -5,31 +5,10 @@ type ProjectScreenshotProps = {
   filename: string;
   projectName: string;
   url?: string;
-  variant?: string;
 };
 
-function ProjectScreenshot({
-  filename,
-  projectName,
-  url,
-  variant,
-}: ProjectScreenshotProps) {
+function ProjectScreenshot({ filename, projectName, url }: ProjectScreenshotProps) {
   const imagePath = new URL(`../../assets/screenshots/${filename}`, import.meta.url).href;
-
-  const buttonData = {
-    myexpressdriver: {
-      label: "voir le site",
-      variant: "med",
-    },
-    "sylvain-galoustoff.dev": {
-      label: "voir la demo",
-      variant: "primary",
-    },
-    "smart home control": {
-      label: "voir la demo",
-      variant: "shc",
-    },
-  };
 
   return (
     <aside className={style.slidePart} id={style.screenshot}>
