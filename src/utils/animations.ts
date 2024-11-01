@@ -1,6 +1,6 @@
 export const variants = {
   initial: {
-    y: 10,
+    y: 20,
     opacity: 0,
   },
   animate: {
